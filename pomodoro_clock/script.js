@@ -28,7 +28,7 @@ start.addEventListener('click',()=>{
             alert('Please Enter a valid Time'+"\n"+"You can enter any time between 0 to 99 minutes and seconds in specific range");
             min.value="00";
             sec.value="00";
-            ring.classList.remove("stop");
+            ring.style.stroke="#09A65A";
         }else{
             startTimer();
         }
@@ -39,17 +39,16 @@ start.addEventListener('click',()=>{
 
 function startTimer(){
     start.innerHTML="Stop";
-    ring.classList.remove("stop");
+    ring.style.stroke="#09A65A"
     x=setInterval(function(){
         if(min.value==0 && sec.value==0){
-            ring.classList.remove("warning");
-            ring.classList.add("ending");
+            ring.style.stroke="red";
             start.innerHTML="Start";
             start.disabled="true";
             clearInterval(x);
             setTimeout(()=>{
                 alert("Time is over!!");
-                ring.classList.remove("ending");
+                ring.style.stroke="#09A65A"
             },100)
         }
         else{
@@ -60,10 +59,6 @@ function startTimer(){
             }else{
                 sec.value-=1;
                 sec.value=('0'+sec.value).slice(-2);
-
-                if(min.value==0 && sec.value<10){
-                    ring.classList.add("warning");
-                }
             }
         }
     },1000)
@@ -72,5 +67,5 @@ function startTimer(){
 function stopTimer(){
     start.innerHTML="start";
     clearInterval(x);
-    ring.classList.add("stop");
+    ring.style.stroke="blue";
 }
