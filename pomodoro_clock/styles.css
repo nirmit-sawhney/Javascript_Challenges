@@ -37,18 +37,6 @@ body {
   z-index: 1;
 }
 
-.ring.ending circle {
-  stroke: #900A0A;
-}
-
-.ring.stop circle{
-  stroke:blue;
-}
-
-.ring.warning circle{
-  stroke: yellow;
-}
-
 /* inner circle */
 .timer {
   align-items: center;
@@ -75,7 +63,7 @@ body {
   top: 30px;
 }
 
-input[type="text"] {
+input[type="number"] {
   border: 0;
   border-bottom: 1px dashed white;
   background: none;
@@ -88,8 +76,14 @@ input[type="text"] {
   outline: none;
 }
 
-input[type=text]:disabled {
+input[type="number"]:disabled {
   border-bottom: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .start {
