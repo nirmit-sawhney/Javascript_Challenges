@@ -15,6 +15,9 @@ jiggleRandomKey();
 
 document.addEventListener("keydown", (event) => {
     let pressedKey=event.key.toUpperCase();
+    if(pressedKey=="TAB") {
+        event.preventDefault();
+    }
     if (pressedKey == dataKey) {
         keys[randomKey].classList.remove("jiggle");
         jiggleRandomKey();
