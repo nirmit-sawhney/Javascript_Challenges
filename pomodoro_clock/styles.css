@@ -60,7 +60,7 @@ body {
 /* actual time */
 .time {
   display: flex;
-  font-family: bebas;
+  font-family: bebas, sans-serif;
   font-size: 196px;
   margin: 30px auto;
   position: relative;
@@ -72,7 +72,7 @@ input[type='number'] {
   border-bottom: 1px dashed white;
   background: none;
   color: white;
-  font-family: bebas;
+  font-family: bebas, sans-serif;
   font-size: 196px;
   height: 170px;
   width: 150px;

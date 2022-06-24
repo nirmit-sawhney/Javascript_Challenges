@@ -16,5 +16,13 @@
   },
   "scripts": {
     "prepare": "husky install"
+  },
+  "dependencies": {
+    "mrm-task-lint-staged": "^7.0.0",
+    "v8-compile-cache": "^2.3.0"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
   }
 }
