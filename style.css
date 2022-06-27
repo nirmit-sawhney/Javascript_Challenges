@@ -2,7 +2,7 @@ body {
   background: rgb(2 0 36);
   background: linear-gradient(
     90deg,
-    rgb(2 0 36 / 100%) 0%,
+    rgb(1, 63, 4) 0%,
     rgb(113 97 134 / 100%) 100%
   );
   color: white;
